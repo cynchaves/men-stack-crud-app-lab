@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Planet</title>
+</head>
+<body>
+    <h1>Add Your Own New Planet!</h1>
+    <form action='/planets' method='POST'>
+        <h3><label for='name'>New planet name:</label></h3>
+        <input type='text' name='name' id='name'/>
+        <h3><label for='isLargerThanEarth'>Is this planet larger than Earth?</label></h3>
+        <label for='isLargerThanEarth'>Yes</label>
+        <input type='radio' name='isLargerThanEarth' id='yes' value='yes'/>
+        <label for='isLargerThanEarth'>No</label>
+        <input type='radio' name='isLargerThanEarth' id='no' value='no'/>
+        <button type='submit'>Submit</button>
+    </form>
+</body>
+</html>
