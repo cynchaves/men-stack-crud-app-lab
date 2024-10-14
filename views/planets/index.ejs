@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Planets</title>
+</head>
+<body>
+    <h3><a href='/'>Homebase</a></h3>
+    <h1>All Planets</h1>
+    <ul>
+        <% planets.forEach(planet => { %>
+        <h3><li><a href='planets/<%= planet._id %>'><%= planet.name %></a></li></h3>
+    <% }) %>
+    </ul>
+    <h3><a href='/planets/new'>Add a Unique Planet of Your Own!</a></h3>
+</body>
+</html>

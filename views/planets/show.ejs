@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet <%= planet.name %></title>
+</head>
+<body>
+    <h3><a href='/'>Homebase</a></h3>
+    <h1><%= planet.name %></h1>
+    <h2>Name: <%= planet.name %></h2>
+    <% if (planet.isLargerThanEarth === true) { %>
+        <h2>Size: This planet is larger than Earth</h2>
+    <% } else { %>
+        <h2>Size: This planet is smaller than Earth</h2>
+    <% }; %>
+    <form action='/planets/<%= planet._id %>?_method=DELETE' method='POST'>
+        <button type='submit'>Delete Planet</button>
+    </form>
+    <h3><a href='/planets/<%= planet._id %>/edit'>Make Changes to Planet</a></h3>
+    <h3><a href='/planets'>Back to All Planets</a></h3>
+</body>
+</html>
